@@ -17,6 +17,7 @@ def getApi_SearchByArea(sido, gugun):
     print (url)
     request = Request(url)
     response_body = urlopen(request).read()
+    print(extractData_SearchByArea(response_body))
     return extractData_SearchByArea(response_body)
 
 def extractData_SearchByArea(strXml):
@@ -25,34 +26,27 @@ def extractData_SearchByArea(strXml):
     SearchByArea = strXml.childNodes
     response = SearchByArea[0].childNodes
     body = response[1].childNodes
-    items = body[0].childNodes
+    items = body[5].childNodes
     for item in items:
-        data = item.childNodes
-        for element in data:
-            if element.nodeName == "sido":
-                sido = element.firstChild.nodeValue
-            elif element.nodeName == "gugun":
-                gugun = element.firstChild.nodeValue
-            elif element.nodeName == "perforList":
-                for element in data:
-                    if element.nodeName == "title":
-                        title = element.firstChild.nodeValue
-                    elif element.nodeName == "startDate":
-                        startDate = element.firstChild.nodeValue
-                    elif element.nodeName == "endDate":
-                        endDate = element.firstChild.nodeValue
-                    elif element.nodeName == "place":
-                        place = element.firstChild.nodeValue
-                    elif element.nodeName == "realmName":
-                        realmName = element.firstChild.nodeValue
-                    elif element.nodeName == "area":
-                        area = element.firstChild.nodeValue
-                    elif element.nodeName == "gpsX":
-                        gpsX = element.firstChild.nodeValue
-                    elif element.nodeName == "gpsY":
-                        gpsY = element.firstChild.nodeValue
-
-    return {"sido":sido, "gugun":gugun, "title":title, "startDate":startDate, "endDate":endDate, "place":place,
+        #data = item.childNodes
+        #for element in data:
+            if item.nodeName == "title":
+                title = item.firstChild.data
+            elif item.nodeName == "startDate":
+                startDate = item.firstChild.data
+            elif item.nodeName == "endDate":
+                endDate = item.firstChild.data
+            elif item.nodeName == "place":
+                place = item.firstChild.data
+            elif item.nodeName == "realmName":
+                realmName = item.firstChild.data
+            elif item.nodeName == "area":
+                area = item.firstChild.data
+            elif item.nodeName == "gpsX":
+                gpsX = item.firstChild.data
+            elif item.nodeName == "gpsY":
+                gpsY = item.firstChild.data
+    return {"title":title, "startDate":startDate, "endDate":endDate, "place":place,
             "realmName":realmName, "area":area, "gpsX":gpsX, "gpsY":gpsY}
 
 
