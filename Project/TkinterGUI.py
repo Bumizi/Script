@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 import tkinter.messagebox
 import random
+#import openapi_uri
 
 g_Tk = Tk()
 g_Tk.geometry("800x600+750+200")
@@ -16,9 +17,10 @@ MonthLabel1 = Label(g_Tk, text="월")
 MonthLabel2 = Label(g_Tk, text="월")
 DayLabel1 = Label(g_Tk, text="일")
 DayLabel2 = Label(g_Tk, text="일")
-InputLabel1 = Entry(g_Tk, width=26, borderwidth=6, relief='ridge')
-InputLabel2 = Entry(g_Tk, width=26, borderwidth=6, relief='ridge')
-RealmComboBox = ttk.Combobox(g_Tk, width=15)
+InputLabel1 = Entry(g_Tk, width=18, borderwidth=6, relief='ridge')
+InputLabel2 = Entry(g_Tk, width=18, borderwidth=6, relief='ridge')
+RealmComboBox = ttk.Combobox(g_Tk, width=15, value=["연극", "음악", "무용", "미술", "건축", "영상", "문학", "문화정책",
+                                                    "축제문화공간", "기타"])
 sMonthComboBox = ttk.Combobox(g_Tk, width=3, value=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"])
 
 sDayComboBox = ttk.Combobox(g_Tk, width=3, value=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13",
@@ -49,14 +51,14 @@ def InitSearchByArea():
     global SearchMode
     SearchMode = 0
 
-    sMonthComboBox.place_forget()
-    sDayComboBox.place_forget()
-    eMonthComboBox.place_forget()
-    eDayComboBox.place_forget()
-    MonthLabel1.place_forget()
-    MonthLabel2.place_forget()
-    DayLabel1.place_forget()
-    DayLabel2.place_forget()
+    #sMonthComboBox.place_forget()
+    #sDayComboBox.place_forget()
+    #eMonthComboBox.place_forget()
+    #eDayComboBox.place_forget()
+    #MonthLabel1.place_forget()
+    #MonthLabel2.place_forget()
+    #DayLabel1.place_forget()
+    #DayLabel2.place_forget()
     RealmComboBox.place_forget()
 
     SearchButton.place(x=320, y=125)
@@ -83,26 +85,28 @@ def InitSearchByPeriod():
     global SearchMode
     SearchMode = 1
 
-    InputLabel1.place_forget()
-    InputLabel2.place_forget()
+    #InputLabel1.place_forget()
+    #InputLabel2.place_forget()
     RealmComboBox.place_forget()
 
     SearchButton.place(x=320, y=125)
 
     SearchLabel.config(text="기간별 검색")
     SearchLabel.place(x=130, y=50)
-    OptionLabel1.config(text="시작일")
+    OptionLabel1.config(text="시작 연월일")
     OptionLabel1.place(x=30, y=100)
-    OptionLabel2.config(text="종료일")
+    OptionLabel2.config(text="종료 연월일")
     OptionLabel2.place(x=30, y=150)
-    MonthLabel1.place(x=150, y=100)
-    DayLabel1.place(x=250, y=100)
-    MonthLabel2.place(x=150, y=150)
-    DayLabel2.place(x=250, y=150)
-    sMonthComboBox.place(x=100, y=100)
-    sDayComboBox.place(x=200, y=100)
-    eMonthComboBox.place(x=100, y=150)
-    eDayComboBox.place(x=200, y=150)
+    InputLabel1.place(x=110, y=95)
+    InputLabel2.place(x=110, y=145)
+    #MonthLabel1.place(x=150, y=100)
+    #DayLabel1.place(x=250, y=100)
+    #MonthLabel2.place(x=150, y=150)
+    #DayLabel2.place(x=250, y=150)
+    #sMonthComboBox.place(x=100, y=100)
+    #sDayComboBox.place(x=200, y=100)
+    #eMonthComboBox.place(x=100, y=150)
+    #eDayComboBox.place(x=200, y=150)
 
 # 분야별 버튼 클릭 시 UI
 def InitSearchByRealm():
@@ -111,14 +115,14 @@ def InitSearchByRealm():
 
     SearchButton.place(x=320, y=125)
 
-    sMonthComboBox.place_forget()
-    sDayComboBox.place_forget()
-    eMonthComboBox.place_forget()
-    eDayComboBox.place_forget()
-    MonthLabel1.place_forget()
-    MonthLabel2.place_forget()
-    DayLabel1.place_forget()
-    DayLabel2.place_forget()
+    #sMonthComboBox.place_forget()
+    #sDayComboBox.place_forget()
+    #eMonthComboBox.place_forget()
+    #eDayComboBox.place_forget()
+    #MonthLabel1.place_forget()
+    #MonthLabel2.place_forget()
+    #DayLabel1.place_forget()
+    #DayLabel2.place_forget()
     OptionLabel2.place_forget()
     InputLabel1.place_forget()
     InputLabel2.place_forget()
@@ -152,9 +156,9 @@ def InitInputLabel():
 
 #일단 안씀
 def InitSearchButton():
-    #SearchButton = Button(g_Tk, text="검색",  command=SearchButtonAction)
-    #SearchButton.pack()
-    #SearchButton.place(x=320, y=125)
+    SearchButton = Button(g_Tk, text="검색",  command=SearchButtonAction)
+    SearchButton.pack()
+    SearchButton.place(x=320, y=125)
     pass
 
 def SearchButtonAction():
@@ -188,6 +192,7 @@ def SearchLibrary():
     req = conn.getresponse()
     global DataList
     DataList.clear()
+    #DataList = extractData_SearchByArea()
 
     if req.status == 200:
         BooksDoc = req.read().decode('utf-8')
@@ -215,19 +220,19 @@ def SearchLibrary():
                         DataList.append((subitems[15].firstChild.nodeValue, subitems[13].firstChild.nodeValue, tel))
                     else:
                         DataList.append((subitems[15].firstChild.nodeValue, subitems[13].firstChild.nodeValue, "-"))
-                for i in range(len(DataList)):
-                    RenderText.insert(INSERT, "[")
-                    RenderText.insert(INSERT, i + 1)
-                    RenderText.insert(INSERT, "] ")
-                    RenderText.insert(INSERT, "시설명: ")
-                    RenderText.insert(INSERT, DataList[i][0])
-                    RenderText.insert(INSERT, "\n")
-                    RenderText.insert(INSERT, "주소: ")
-                    RenderText.insert(INSERT, DataList[i][1])
-                    RenderText.insert(INSERT, "\n")
-                    RenderText.insert(INSERT, "전화번호: ")
-                    RenderText.insert(INSERT, DataList[i][2])
-                    RenderText.insert(INSERT, "\n\n")
+            for i in range(len(DataList)):
+                RenderText.insert(INSERT, "[")
+                RenderText.insert(INSERT, i + 1)
+                RenderText.insert(INSERT, "] ")
+                RenderText.insert(INSERT, "시설명: ")
+                RenderText.insert(INSERT, DataList[i][0])
+                RenderText.insert(INSERT, "\n")
+                RenderText.insert(INSERT, "주소: ")
+                RenderText.insert(INSERT, DataList[i][1])
+                RenderText.insert(INSERT, "\n")
+                RenderText.insert(INSERT, "전화번호: ")
+                RenderText.insert(INSERT, DataList[i][2])
+                RenderText.insert(INSERT, "\n\n")
 
 
 def InitRenderText():
@@ -248,8 +253,10 @@ SearchButton = Button(g_Tk, text="검색",  command=SearchButtonAction)
 SearchCategoryButton()
 InitTopText()
 InitSearchListBox()
-#InitInputLabel()
-#InitSearchButton()
+
+InitInputLabel()
+InitSearchButton()
+
 InitRenderText()
 #InitSendEmailButton()
 #InitSortListBox()

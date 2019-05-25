@@ -4,74 +4,159 @@ import sys
 from urllib.parse import urlencode, quote_plus
 from urllib.request import Request, urlopen
 from xml.dom.minidom import parseString
-def makeUrl_SearchByArea(sido, gugun):
+
+DataList = []
+
+def makeUrl_SearchByArea(sido, gugun, rows):
     #client_id = "J0xlzLY_mwqXVGY7OBho"
     #encText = urllib.parse.quote("한국산업기술대")
     url = "http://www.culture.go.kr/openapi/rest/publicperformancedisplays/area"# + encText
     ServiceKey = '5jJOAyIYEGAq71RHF1AMCi8%2F0s%2Fw0G9%2FWlxzhjXUpSNItx2%2FeaCs9kruHWarDxWgAZOTCXtbeuVXbupzdqDm%2FQ%3D%3D'
-    queryParams = '?' + 'serviceKey=' + ServiceKey + '&' + urlencode({quote_plus('sido'): sido, quote_plus('gugun'): gugun})
+    queryParams = '?' + 'serviceKey=' + ServiceKey + '&' + urlencode({quote_plus('sido'): sido, quote_plus('gugun'): gugun, quote_plus('rows'): rows})
     return url + queryParams
 
-def getApi_SearchByArea(sido, gugun):
-    url = makeUrl_SearchByArea(sido, gugun)
+def getApi_SearchByArea(sido, gugun, rows):
+    url = makeUrl_SearchByArea(sido, gugun, rows)
     print (url)
     request = Request(url)
     response_body = urlopen(request).read()
-    print(extractData_SearchByArea(response_body))
-    return extractData_SearchByArea(response_body)
+    print(extractData_PerforList(response_body))
+    return extractData_PerforList(response_body)
 
-def extractData_SearchByArea(strXml):
+
+def makeUrl_SearchByPeriod(start, end, rows):
+    #client_id = "J0xlzLY_mwqXVGY7OBho"
+    #encText = urllib.parse.quote("한국산업기술대")
+    url = "http://www.culture.go.kr/openapi/rest/publicperformancedisplays/period"# + encText
+    ServiceKey = '5jJOAyIYEGAq71RHF1AMCi8%2F0s%2Fw0G9%2FWlxzhjXUpSNItx2%2FeaCs9kruHWarDxWgAZOTCXtbeuVXbupzdqDm%2FQ%3D%3D'
+    queryParams = '?' + 'serviceKey=' + ServiceKey + '&' + urlencode({quote_plus('from'): start, quote_plus('to'): end, quote_plus('rows'): rows})
+    return url + queryParams
+
+def getApi_SearchByPeriod(start, end, rows):
+    url = makeUrl_SearchByPeriod(start, end, rows)
+    print (url)
+    request = Request(url)
+    response_body = urlopen(request).read()
+    print(extractData_PerforList(response_body))
+    return extractData_PerforList(response_body)
+
+
+def makeUrl_SearchByRealm(realm, rows):
+    #client_id = "J0xlzLY_mwqXVGY7OBho"
+    #encText = urllib.parse.quote("한국산업기술대")
+    url = "http://www.culture.go.kr/openapi/rest/publicperformancedisplays/realm"# + encText
+    ServiceKey = '5jJOAyIYEGAq71RHF1AMCi8%2F0s%2Fw0G9%2FWlxzhjXUpSNItx2%2FeaCs9kruHWarDxWgAZOTCXtbeuVXbupzdqDm%2FQ%3D%3D'
+    if realm == "연극":
+        realmCode = "A000"
+    elif realm == "음악":
+        realmCode = "B000"
+    elif realm == "무용":
+        realmCode = "C000"
+    elif realm == "미술":
+        realmCode = "D000"
+    elif realm == "건축":
+        realmCode = "E000"
+    elif realm == "영상":
+        realmCode = "G000"
+    elif realm == "문학":
+        realmCode = "H000"
+    elif realm == "문화정책":
+        realmCode = "I000"
+    elif realm == "축제문화공간":
+        realmCode = "J000"
+    elif realm == "기타":
+        realmCode = "L000"
+    queryParams = '?' + 'serviceKey=' + ServiceKey + '&' + urlencode({quote_plus('realmCode'): realmCode, quote_plus('rows'): rows})
+    return url + queryParams
+
+def getApi_SearchByRealm(realm, rows):
+    url = makeUrl_SearchByRealm(realm, rows)
+    print (url)
+    request = Request(url)
+    response_body = urlopen(request).read()
+    print(extractData_PerforList(response_body))
+    return extractData_PerforList(response_body)
+
+
+def extractData_PerforList(strXml):
+    global DataList
+    DataList.clear()
     dom = parseString(strXml)
     strXml = dom
     SearchByArea = strXml.childNodes
     response = SearchByArea[0].childNodes
     body = response[1].childNodes
-    items = body[5].childNodes
-    for item in items:
-        #data = item.childNodes
-        #for element in data:
-            if item.nodeName == "title":
-                title = item.firstChild.data
-            elif item.nodeName == "startDate":
-                startDate = item.firstChild.data
-            elif item.nodeName == "endDate":
-                endDate = item.firstChild.data
-            elif item.nodeName == "place":
-                place = item.firstChild.data
-            elif item.nodeName == "realmName":
-                realmName = item.firstChild.data
-            elif item.nodeName == "area":
-                area = item.firstChild.data
-            elif item.nodeName == "gpsX":
-                gpsX = item.firstChild.data
-            elif item.nodeName == "gpsY":
-                gpsY = item.firstChild.data
-    return {"title":title, "startDate":startDate, "endDate":endDate, "place":place,
-            "realmName":realmName, "area":area, "gpsX":gpsX, "gpsY":gpsY}
-
-
+    for items in body:
+        if items.nodeName == "perforList":
+            for item in items.childNodes:
+                if item.nodeName == "title":
+                    title = item.firstChild.data
+                elif item.nodeName == "startDate":
+                    if item.firstChild is not None:
+                        startDate = item.firstChild.data
+                    else:
+                        startDate = "정보없음"
+                elif item.nodeName == "endDate":
+                    if item.firstChild is not None:
+                        endDate = item.firstChild.data
+                    else:
+                        endDate = "정보없음"
+                elif item.nodeName == "place":
+                    if item.firstChild is not None:
+                        place = item.firstChild.data
+                    else:
+                        place = "정보없음"
+                elif item.nodeName == "realmName":
+                    if item.firstChild is not None:
+                        realmName = item.firstChild.data
+                    else:
+                        realmName = "정보없음"
+                elif item.nodeName == "area":
+                    if item.firstChild is not None:
+                        area = item.firstChild.data
+                    else:
+                        area = "정보없음"
+                elif item.nodeName == "gpsX":
+                    if item.firstChild is not None:
+                        gpsX = item.firstChild.data
+                    else:
+                        gpsX = 0
+                elif item.nodeName == "gpsY":
+                    if item.firstChild is not None:
+                        gpsY = item.firstChild.data
+                    else:
+                        gpsY = 0
+            DataList.append((title, startDate, endDate, place, realmName, area, gpsX, gpsY))
+    return DataList
 
 def printMenu():
     print("\nWelcome! Book Manager Program (xml version)")
     print("========Menu==========")
     print("Load xml:  l")
     print("Quit program:   q")
-    print("print Book list: b")
+    print("지역별 검색: a")
+    print("기간별 검색: p")
+    print("분야별 검색: r")
     print("----------------------------------------")
     print("========Menu==========")
 
 
 def launcherFunction(menu):
     if menu == 'l':
-        #LoadXMLFromFile()
         pass
     elif menu == 'q':
         QuitBookMgr()
-    elif menu == 'b':
-        #PrintBookList(["title", ])
+    elif menu == 'a':
         sido = str(input('시/도 입력 :'))
         gugun = str(input('구/군 입력 :'))
-        getApi_SearchByArea(sido, gugun)
+        getApi_SearchByArea(sido, gugun, 999)
+    elif menu == 'p':
+        start = str(input('시작 연월일 입력 :'))
+        end = str(input('종료 연월일 입력 :'))
+        getApi_SearchByPeriod(start, end, 999)
+    elif menu == 'r':
+        realm = str(input('분야 입력 :'))
+        getApi_SearchByRealm(realm, 999)
     else:
         print("error : unknown menu key")
 
