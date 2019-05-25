@@ -78,18 +78,37 @@ def getApi_SearchByRealm(realm, rows):
     return extractData_PerforList(response_body)
 
 
+def makeUrl_SearchBySeq(seq):
+    #client_id = "J0xlzLY_mwqXVGY7OBho"
+    #encText = urllib.parse.quote("한국산업기술대")
+    url = "http://www.culture.go.kr/openapi/rest/publicperformancedisplays/d/"# + encText
+    ServiceKey = '5jJOAyIYEGAq71RHF1AMCi8%2F0s%2Fw0G9%2FWlxzhjXUpSNItx2%2FeaCs9kruHWarDxWgAZOTCXtbeuVXbupzdqDm%2FQ%3D%3D'
+    queryParams = '?' + 'serviceKey=' + ServiceKey + '&' + urlencode({quote_plus('seq'): seq})
+    return url + queryParams
+
+def getApi_SearchBySeq(seq):
+    url = makeUrl_SearchBySeq(seq)
+    print (url)
+    request = Request(url)
+    response_body = urlopen(request).read()
+    print(extractData_SpecificPerfor(response_body))
+    return extractData_SpecificPerfor(response_body)
+
+
 def extractData_PerforList(strXml):
     global DataList
     DataList.clear()
     dom = parseString(strXml)
     strXml = dom
-    SearchByArea = strXml.childNodes
-    response = SearchByArea[0].childNodes
+    PerforList = strXml.childNodes
+    response = PerforList[0].childNodes
     body = response[1].childNodes
     for items in body:
         if items.nodeName == "perforList":
             for item in items.childNodes:
-                if item.nodeName == "title":
+                if item.nodeName == "seq":
+                    seq = item.firstChild.data
+                elif item.nodeName == "title":
                     title = item.firstChild.data
                 elif item.nodeName == "startDate":
                     if item.firstChild is not None:
@@ -126,7 +145,95 @@ def extractData_PerforList(strXml):
                         gpsY = item.firstChild.data
                     else:
                         gpsY = 0
-            DataList.append((title, startDate, endDate, place, realmName, area, gpsX, gpsY))
+            DataList.append((seq, title, startDate, endDate, place, realmName, area, gpsX, gpsY))
+    return DataList
+
+def extractData_SpecificPerfor(strXml):
+    global DataList
+    DataList.clear()
+    dom = parseString(strXml)
+    strXml = dom
+    PerforList = strXml.childNodes
+    response = PerforList[0].childNodes
+    body = response[1].childNodes
+    items = body[1].childNodes
+    for item in items:
+        if item.nodeName == "seq":
+            seq = item.firstChild.data
+        elif item.nodeName == "title":
+            title = item.firstChild.data
+        elif item.nodeName == "startDate":
+            if item.firstChild is not None:
+                startDate = item.firstChild.data
+            else:
+                startDate = "정보없음"
+        elif item.nodeName == "endDate":
+            if item.firstChild is not None:
+                endDate = item.firstChild.data
+            else:
+                endDate = "정보없음"
+        elif item.nodeName == "place":
+            if item.firstChild is not None:
+                place = item.firstChild.data
+            else:
+                place = "정보없음"
+        elif item.nodeName == "realmName":
+            if item.firstChild is not None:
+                realmName = item.firstChild.data
+            else:
+                realmName = "정보없음"
+        elif item.nodeName == "area":
+            if item.firstChild is not None:
+                area = item.firstChild.data
+            else:
+                area = "정보없음"
+        elif item.nodeName == "subTitle":
+            if item.firstChild is not None:
+                subTitle = item.firstChild.data
+            else:
+                subTitle = "정보없음"
+        elif item.nodeName == "price":
+            if item.firstChild is not None:
+                price = item.firstChild.data
+            else:
+                price = "정보없음"
+        elif item.nodeName == "contents1":
+            if item.firstChild is not None:
+                contents1 = item.firstChild.data
+            else:
+                contents1 = "정보없음"
+        elif item.nodeName == "contents2":
+            if item.firstChild is not None:
+                contents2 = item.firstChild.data
+            else:
+                contents2 = "정보없음"
+        elif item.nodeName == "url":
+            if item.firstChild is not None:
+                url = item.firstChild.data
+            else:
+                url = "정보없음"
+        elif item.nodeName == "phone":
+            if item.firstChild is not None:
+                phone = item.firstChild.data
+            else:
+                phone = "정보없음"
+        elif item.nodeName == "gpsX":
+            if item.firstChild is not None:
+                gpsX = item.firstChild.data
+            else:
+                gpsX = 0
+        elif item.nodeName == "gpsY":
+            if item.firstChild is not None:
+                gpsY = item.firstChild.data
+            else:
+                gpsY = 0
+        elif item.nodeName == "placeAddr":
+            if item.firstChild is not None:
+                placeAddr = item.firstChild.data
+            else:
+                placeAddr = "정보없음"
+    DataList.append((seq, title, startDate, endDate, place, realmName, area, subTitle, price, contents1, contents2,
+                     url, phone, gpsX, gpsY, placeAddr))
     return DataList
 
 def printMenu():
@@ -137,6 +244,7 @@ def printMenu():
     print("지역별 검색: a")
     print("기간별 검색: p")
     print("분야별 검색: r")
+    print("상세 검색: s")
     print("----------------------------------------")
     print("========Menu==========")
 
@@ -157,6 +265,9 @@ def launcherFunction(menu):
     elif menu == 'r':
         realm = str(input('분야 입력 :'))
         getApi_SearchByRealm(realm, 999)
+    elif menu == 's':
+        seq = str(input('일련번호 입력 :'))
+        getApi_SearchBySeq(seq)
     else:
         print("error : unknown menu key")
 

@@ -9,33 +9,24 @@ g_Tk.geometry("800x600+750+200")
 g_Tk.title("공연 / 전시 정보 조회 서비스")
 DataList = []
 SearchMode = 3
-
 SearchLabel = Label(g_Tk, text="지역별 검색")
+SpecificSearchLabel = Label(g_Tk, text="일련번호")
 OptionLabel1 = Label(g_Tk, text="시/도")
 OptionLabel2 = Label(g_Tk, text="구/군")
-MonthLabel1 = Label(g_Tk, text="월")
-MonthLabel2 = Label(g_Tk, text="월")
-DayLabel1 = Label(g_Tk, text="일")
-DayLabel2 = Label(g_Tk, text="일")
 InputLabel1 = Entry(g_Tk, width=18, borderwidth=6, relief='ridge')
 InputLabel2 = Entry(g_Tk, width=18, borderwidth=6, relief='ridge')
+
 RealmComboBox = ttk.Combobox(g_Tk, width=15, value=["연극", "음악", "무용", "미술", "건축", "영상", "문학", "문화정책",
                                                     "축제문화공간", "기타"])
-sMonthComboBox = ttk.Combobox(g_Tk, width=3, value=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"])
-
-sDayComboBox = ttk.Combobox(g_Tk, width=3, value=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13",
-                                                 "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24",
-                                                 "25", "26", "27", "28", "29", "30", "31"])
-eMonthComboBox = ttk.Combobox(g_Tk, width=3, value=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"])
-
-eDayComboBox = ttk.Combobox(g_Tk, width=3, value=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13",
-                                                 "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24",
-                                                 "25", "26", "27", "28", "29", "30", "31"])
 
 # 타이틀 표시
 def InitTopText():
     MainText = Label(g_Tk, text="[공연 / 전시 정보검색 서비스]")
     MainText.place(x=330)
+    SpecificSearchLabel = Label(g_Tk, text="일련번호")
+    SpecificSearchLabel.place(x=420, y=70)
+    InputLabel3 = Entry(g_Tk, width=18, borderwidth=6, relief='ridge')
+    InputLabel3.place(x=480, y=65)
 
 # 기능별 버튼 생성
 def SearchCategoryButton():
@@ -50,19 +41,8 @@ def SearchCategoryButton():
 def InitSearchByArea():
     global SearchMode
     SearchMode = 0
-
-    #sMonthComboBox.place_forget()
-    #sDayComboBox.place_forget()
-    #eMonthComboBox.place_forget()
-    #eDayComboBox.place_forget()
-    #MonthLabel1.place_forget()
-    #MonthLabel2.place_forget()
-    #DayLabel1.place_forget()
-    #DayLabel2.place_forget()
     RealmComboBox.place_forget()
-
     SearchButton.place(x=320, y=125)
-
     SearchLabel.config(text="지역별 검색")
     SearchLabel.place(x=130, y=50)
     OptionLabel1.config(text="시/도")
@@ -72,25 +52,12 @@ def InitSearchByArea():
     InputLabel1.place(x=80, y=95)
     InputLabel2.place(x=80, y=145)
 
-    #sidoScrollbar = Scrollbar(g_Tk)
-    #sidoScrollbar.pack(fill="y")
-    #sidoScrollbar.place(x=240, y=85)
-    #sidoListBox = Listbox(g_Tk, activestyle='none', width=15, height=1, borderwidth=12, relief='ridge', yscrollcommand=sidoScrollbar.set)
-    #sidoListBox.pack()
-    #sidoListBox.place(x=100, y=90)
-    #sidoScrollbar.config(command=sidoListBox.yview)
-
 # 기간별 버튼 클릭 시 UI
 def InitSearchByPeriod():
     global SearchMode
     SearchMode = 1
-
-    #InputLabel1.place_forget()
-    #InputLabel2.place_forget()
     RealmComboBox.place_forget()
-
     SearchButton.place(x=320, y=125)
-
     SearchLabel.config(text="기간별 검색")
     SearchLabel.place(x=130, y=50)
     OptionLabel1.config(text="시작 연월일")
@@ -99,34 +66,15 @@ def InitSearchByPeriod():
     OptionLabel2.place(x=30, y=150)
     InputLabel1.place(x=110, y=95)
     InputLabel2.place(x=110, y=145)
-    #MonthLabel1.place(x=150, y=100)
-    #DayLabel1.place(x=250, y=100)
-    #MonthLabel2.place(x=150, y=150)
-    #DayLabel2.place(x=250, y=150)
-    #sMonthComboBox.place(x=100, y=100)
-    #sDayComboBox.place(x=200, y=100)
-    #eMonthComboBox.place(x=100, y=150)
-    #eDayComboBox.place(x=200, y=150)
 
 # 분야별 버튼 클릭 시 UI
 def InitSearchByRealm():
     global SearchMode
     SearchMode = 2
-
     SearchButton.place(x=320, y=125)
-
-    #sMonthComboBox.place_forget()
-    #sDayComboBox.place_forget()
-    #eMonthComboBox.place_forget()
-    #eDayComboBox.place_forget()
-    #MonthLabel1.place_forget()
-    #MonthLabel2.place_forget()
-    #DayLabel1.place_forget()
-    #DayLabel2.place_forget()
     OptionLabel2.place_forget()
     InputLabel1.place_forget()
     InputLabel2.place_forget()
-
     SearchLabel.config(text="분야별 검색")
     SearchLabel.place(x=130, y=50)
     OptionLabel1.config(text="분야")
@@ -160,6 +108,11 @@ def InitSearchButton():
     SearchButton.pack()
     SearchButton.place(x=320, y=125)
     pass
+
+def InitSearchButton2():
+    SearchButton = Button(g_Tk, text="검색",  command=SearchButtonAction)
+    SearchButton.pack()
+    SearchButton.place(x=650, y=65)
 
 def SearchButtonAction():
     global SearchListBox, SearchMode
@@ -238,13 +191,27 @@ def SearchLibrary():
 def InitRenderText():
     global RenderText
     RenderTextScrollbar = Scrollbar(g_Tk)
-    RenderTextScrollbar.pack()
-    RenderTextScrollbar.place(x=375, y=200)
+    #RenderTextScrollbar.pack()
+    #RenderTextScrollbar.place(x=375, y=200)
     RenderText = Text(g_Tk, width=49, height=27, borderwidth=12, relief='ridge', yscrollcommand=RenderTextScrollbar.set)
     RenderText.pack()
     RenderText.place(x=10, y=215)
     RenderTextScrollbar.config(command=RenderText.yview)
-    RenderTextScrollbar.pack(side=RIGHT, fill=BOTH)
+    #RenderTextScrollbar.pack(side=RIGHT, fill=BOTH)
+    RenderTextScrollbar.place(x=380, y=215)
+    RenderText.configure(state='disabled')
+
+def InitRenderText2():
+    global RenderText2
+    RenderTextScrollbar2 = Scrollbar(g_Tk)
+    #RenderTextScrollbar2.pack()
+    #RenderTextScrollbar2.place(x=375, y=100)
+    RenderText2 = Text(g_Tk, width=49, height=36, borderwidth=12, relief='ridge', yscrollcommand=RenderTextScrollbar2.set)
+    RenderText2.pack()
+    RenderText2.place(x=410, y=100)
+    RenderTextScrollbar2.config(command=RenderText.yview)
+    #RenderTextScrollbar.pack(side=RIGHT, fill=BOTH)
+    RenderTextScrollbar2.place(x=780, y=100)
     RenderText.configure(state='disabled')
 
 
@@ -252,12 +219,14 @@ SearchButton = Button(g_Tk, text="검색",  command=SearchButtonAction)
 
 SearchCategoryButton()
 InitTopText()
-InitSearchListBox()
+#InitSearchListBox()
 
 InitInputLabel()
-InitSearchButton()
+#InitSearchButton()
+InitSearchButton2()
 
 InitRenderText()
+InitRenderText2()
 #InitSendEmailButton()
 #InitSortListBox()
 #InitSortButton()
