@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9997adb8-d128-4494-a525-b9a58670c8b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TkinterGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/TkinterGUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openapi_uri.py" beforeDir="false" afterPath="$PROJECT_DIR$/openapi_uri.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +15,11 @@
     <session id="601335040">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.3" value="3" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.3" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -37,12 +35,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="1" />
-          <entry key="py" value="2108" />
+          <entry key="py" value="2525" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2109" />
+          <entry key="Python" value="2526" />
         </counts>
       </usages-collector>
     </session>
@@ -55,17 +53,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="176" column="44" lean-forward="true" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
+            <state relative-caret-position="3268">
+              <caret line="176" column="44" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/openapi_uri.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="131" column="42" lean-forward="true" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
+            <state relative-caret-position="891">
+              <caret line="276" column="16" lean-forward="true" selection-start-line="276" selection-start-column="16" selection-end-line="276" selection-end-column="16" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#240#714#0" />
@@ -76,31 +74,35 @@
                 <element signature="e#2864#3089#0" />
                 <element signature="e#3126#3542#0" />
                 <element signature="e#3577#3800#0" />
+                <element signature="e#3843#5977#0" />
                 <element signature="e#6023#9144#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="114">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#748#1023#0" />
-                <element signature="e#1039#1347#0" />
-                <element signature="e#1512#1978#0" />
-                <element signature="e#2027#2501#0" />
-                <element signature="e#2549#2971#0" />
-                <element signature="e#2662#3194#0" />
-                <element signature="e#3229#3380#0" />
-                <element signature="e#3417#3554#0" />
-                <element signature="e#3585#3712#0" />
-                <element signature="e#4075#4866#0" />
-                <element signature="e#4861#5508#0" />
-                <element signature="e#4340#6559#0" />
+                <element signature="e#878#1262#0" />
+                <element signature="e#1308#1665#0" />
+                <element signature="e#1712#2166#0" />
+                <element signature="e#2153#2615#0" />
+                <element signature="e#2601#2949#0" />
+                <element signature="e#2980#3512#0" />
+                <element signature="e#3859#4104#0" />
+                <element signature="e#4075#4579#0" />
+                <element signature="e#4535#4731#0" />
+                <element signature="e#4619#5699#0" />
+                <element signature="e#5662#8146#0" />
+                <element signature="e#5727#7905#0" />
+                <element signature="e#7934#8314#0" />
+                <element signature="e#8343#8732#0" />
+                <marker date="1558871368750" expanded="true" signature="3929:3931" ph="..." />
               </folding>
             </state>
           </provider>
@@ -129,7 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,6 +142,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,15 +305,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apiService.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="176" column="44" lean-forward="true" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
+        <state relative-caret-position="3268">
+          <caret line="176" column="44" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#878#1262#0" />
+            <element signature="e#1308#1665#0" />
+            <element signature="e#1712#2166#0" />
+            <element signature="e#2153#2615#0" />
+            <element signature="e#2601#2949#0" />
+            <element signature="e#2980#3512#0" />
+            <element signature="e#3859#4104#0" />
+            <element signature="e#4075#4579#0" />
+            <element signature="e#4535#4731#0" />
+            <element signature="e#4619#5699#0" />
+            <element signature="e#5662#8146#0" />
+            <element signature="e#5727#7905#0" />
+            <element signature="e#7934#8314#0" />
+            <element signature="e#8343#8732#0" />
+            <marker date="1558871368750" expanded="true" signature="3929:3931" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/openapi_uri.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="131" column="42" lean-forward="true" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
+        <state relative-caret-position="891">
+          <caret line="276" column="16" lean-forward="true" selection-start-line="276" selection-start-column="16" selection-end-line="276" selection-end-column="16" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#240#714#0" />
@@ -322,29 +349,8 @@
             <element signature="e#2864#3089#0" />
             <element signature="e#3126#3542#0" />
             <element signature="e#3577#3800#0" />
+            <element signature="e#3843#5977#0" />
             <element signature="e#6023#9144#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#748#1023#0" />
-            <element signature="e#1039#1347#0" />
-            <element signature="e#1512#1978#0" />
-            <element signature="e#2027#2501#0" />
-            <element signature="e#2549#2971#0" />
-            <element signature="e#2662#3194#0" />
-            <element signature="e#3229#3380#0" />
-            <element signature="e#3417#3554#0" />
-            <element signature="e#3585#3712#0" />
-            <element signature="e#4075#4866#0" />
-            <element signature="e#4861#5508#0" />
-            <element signature="e#4340#6559#0" />
           </folding>
         </state>
       </provider>
