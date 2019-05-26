@@ -279,9 +279,9 @@ def QuitBookMgr():
 loopFlag = 1
 
 ##### run #####
-while (loopFlag > 0):
-    printMenu()
-    menuKey = str(input('select menu :'))
-    launcherFunction(menuKey)
-else:
-    print("Thank you! Good Bye")
+#while (loopFlag > 0):
+#    printMenu()
+#    menuKey = str(input('select menu :'))
+#    launcherFunction(menuKey)
+#else:
+#    print("Thank you! Good Bye")
