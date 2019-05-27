@@ -1,9 +1,17 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import font
+from io import BytesIO
+import urllib
+import urllib.request
+from PIL import Image, ImageTk
+
 import tkinter.messagebox
 import random
 from openapi_uri import *
+from gmail import *
+
+
 
 g_Tk = Tk()
 g_Tk.geometry("800x600+750+200")
@@ -19,6 +27,7 @@ InputLabel2 = Entry(g_Tk, width=18, borderwidth=6, relief='ridge')
 InputLabel3 = Entry(g_Tk, width=18, borderwidth=6, relief='ridge')
 RealmComboBox = ttk.Combobox(g_Tk, width=15, value=["연극", "음악", "무용", "미술", "건축", "영상", "문학", "문화정책",
                                                     "축제문화공간", "기타"])
+
 
 # 타이틀 표시
 def InitTopText():
@@ -107,6 +116,12 @@ def InitSearchButton():
     SearchButton.place(x=320, y=125)
     SpecificSearchButton = Button(g_Tk, font=TempFont2, text="검색", command=SpecificSearchButtonAction)
     SpecificSearchButton.place(x=650, y=65)
+    SendingEmailButton = Button(g_Tk, font=TempFont2, text="E-mail", command=SendingMailButtonAction)
+    SendingEmailButton.place(x=700, y=65)
+
+# 이메일 버튼 클릭
+def SendingMailButtonAction():
+    SendingMail(DataList)
 
 # 검색 버튼 클릭
 def SearchButtonAction():
@@ -212,9 +227,26 @@ def DisplaySpecificInfo(DataList):
         RenderText2.insert(INSERT, "\n")
         RenderText2.insert(INSERT, DataList[i][12])
         RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[사진]")
+        RenderText2.insert(INSERT, "\n")
+
+
+        #with urllib.request.urlopen(DataList[i][13]) as u:
+        #    raw_data = u.read()
+        #im = Image.open(BytesIO(raw_data))
+        #image = ImageTk.PhotoImage(im)
+        #label = Label(RenderText2, image=image, height=300, width=300)
+        #label.pack()
+        #label.place(x=0, y=0)
+
+        #RenderText2.window_create(INSERT, create=DisplayImage(DataList[i][13]))
+        #RenderText2.image_create(INSERT, image=image)
+        #RenderText2.window_create(INSERT, window=DisplayImage(DataList[i][13]))
+        #RenderText2.image_create(INSERT, image=DisplayImage(DataList[i][13]))
+        RenderText2.insert(INSERT, "\n\n")
         RenderText2.insert(INSERT, "[상세 주소]")
         RenderText2.insert(INSERT, "\n")
-        RenderText2.insert(INSERT, DataList[i][15])
+        RenderText2.insert(INSERT, DataList[i][16])
         RenderText2.insert(INSERT, "\n\n")
 
 # 안씀
@@ -288,6 +320,19 @@ def InitSpecificRenderText():
     RenderTextScrollbar2.config(command=RenderText2.yview)
     RenderTextScrollbar2.place(x=780, y=100)
     RenderText.configure(state='disabled')
+
+# 공연전시 이미지 출력
+def DisplayImage(url):
+    global RenderText2
+    with urllib.request.urlopen(url) as u:
+        raw_data = u.read()
+    im = Image.open(BytesIO(raw_data))
+    image = ImageTk.PhotoImage(im)
+    label = Label(RenderText2, image=image, height=300, width=300)
+    label.pack()
+    label.place(x=0, y=0)
+    #label = Label(RenderText2, image=image, height=200, width=200)
+    #return image
 
 
 SearchButton = Button(g_Tk, text="검색",  command=SearchButtonAction)

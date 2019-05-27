@@ -7,6 +7,7 @@ from xml.dom.minidom import parseString
 
 DataList = []
 
+# 지역별 검색
 def makeUrl_SearchByArea(sido, gugun, rows):
     #client_id = "J0xlzLY_mwqXVGY7OBho"
     #encText = urllib.parse.quote("한국산업기술대")
@@ -24,6 +25,8 @@ def getApi_SearchByArea(sido, gugun, rows):
     return extractData_PerforList(response_body)
 
 
+
+# 기간별 검색
 def makeUrl_SearchByPeriod(start, end, rows):
     #client_id = "J0xlzLY_mwqXVGY7OBho"
     #encText = urllib.parse.quote("한국산업기술대")
@@ -41,6 +44,8 @@ def getApi_SearchByPeriod(start, end, rows):
     return extractData_PerforList(response_body)
 
 
+
+# 분야별 검색
 def makeUrl_SearchByRealm(realm, rows):
     #client_id = "J0xlzLY_mwqXVGY7OBho"
     #encText = urllib.parse.quote("한국산업기술대")
@@ -78,6 +83,8 @@ def getApi_SearchByRealm(realm, rows):
     return extractData_PerforList(response_body)
 
 
+
+# 상세 검색
 def makeUrl_SearchBySeq(seq):
     #client_id = "J0xlzLY_mwqXVGY7OBho"
     #encText = urllib.parse.quote("한국산업기술대")
@@ -95,6 +102,8 @@ def getApi_SearchBySeq(seq):
     return extractData_SpecificPerfor(response_body)
 
 
+
+# 데이터 추출
 def extractData_PerforList(strXml):
     global DataList
     DataList.clear()
@@ -217,6 +226,11 @@ def extractData_SpecificPerfor(strXml):
                 phone = item.firstChild.data
             else:
                 phone = "정보없음"
+        elif item.nodeName == "imgUrl":
+            if item.firstChild is not None:
+                imgUrl = item.firstChild.data
+            else:
+                imgUrl = "정보없음"
         elif item.nodeName == "gpsX":
             if item.firstChild is not None:
                 gpsX = item.firstChild.data
@@ -233,55 +247,5 @@ def extractData_SpecificPerfor(strXml):
             else:
                 placeAddr = "정보없음"
     DataList.append((seq, title, startDate, endDate, place, realmName, area, subTitle, price, contents1, contents2,
-                     url, phone, gpsX, gpsY, placeAddr))
+                     url, phone, imgUrl, gpsX, gpsY, placeAddr))
     return DataList
-
-def printMenu():
-    print("\nWelcome! Book Manager Program (xml version)")
-    print("========Menu==========")
-    print("Load xml:  l")
-    print("Quit program:   q")
-    print("지역별 검색: a")
-    print("기간별 검색: p")
-    print("분야별 검색: r")
-    print("상세 검색: s")
-    print("----------------------------------------")
-    print("========Menu==========")
-
-
-def launcherFunction(menu):
-    if menu == 'l':
-        pass
-    elif menu == 'q':
-        QuitBookMgr()
-    elif menu == 'a':
-        sido = str(input('시/도 입력 :'))
-        gugun = str(input('구/군 입력 :'))
-        getApi_SearchByArea(sido, gugun, 999)
-    elif menu == 'p':
-        start = str(input('시작 연월일 입력 :'))
-        end = str(input('종료 연월일 입력 :'))
-        getApi_SearchByPeriod(start, end, 999)
-    elif menu == 'r':
-        realm = str(input('분야 입력 :'))
-        getApi_SearchByRealm(realm, 999)
-    elif menu == 's':
-        seq = str(input('일련번호 입력 :'))
-        getApi_SearchBySeq(seq)
-    else:
-        print("error : unknown menu key")
-
-
-def QuitBookMgr():
-    global loopFlag
-    loopFlag = 0
-
-loopFlag = 1
-
-##### run #####
-#while (loopFlag > 0):
-#    printMenu()
-#    menuKey = str(input('select menu :'))
-#    launcherFunction(menuKey)
-#else:
-#    print("Thank you! Good Bye")
