@@ -4,6 +4,8 @@
     <list default="true" id="9997adb8-d128-4494-a525-b9a58670c8b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TkinterGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/TkinterGUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python36-master/python36-master/2부/17장/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python36-master/python36-master/2부/17장/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,6 +13,28 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="601335040">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="69" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="69" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Project" />
@@ -20,7 +44,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="826">
+            <state relative-caret-position="3268">
               <caret line="176" column="44" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
             </state>
           </provider>
@@ -50,24 +74,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="171">
+              <caret line="320" column="37" lean-forward="true" selection-start-line="320" selection-start-column="37" selection-end-line="320" selection-end-column="37" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#1058#1371#0" />
-                <element signature="e#1417#1774#0" />
-                <element signature="e#1816#2270#0" />
-                <element signature="e#2314#2776#0" />
-                <element signature="e#2819#3167#0" />
-                <element signature="e#3776#4187#0" />
-                <element signature="e#4236#4257#0" />
-                <element signature="e#4300#4804#0" />
-                <element signature="e#4858#5071#0" />
-                <element signature="e#5124#6204#0" />
-                <element signature="e#6353#8965#0" />
-                <element signature="e#9560#11738#0" />
-                <element signature="e#11779#12159#0" />
-                <element signature="e#12096#12976#0" />
+                <element signature="e#1398#1711#0" />
+                <element signature="e#1757#2114#0" />
+                <element signature="e#2156#2573#0" />
+                <element signature="e#2617#3042#0" />
+                <element signature="e#3085#3396#0" />
+                <element signature="e#3437#3848#0" />
+                <element signature="e#3961#4465#0" />
+                <element signature="e#4519#4732#0" />
+                <element signature="e#4785#5865#0" />
+                <element signature="e#8566#10744#0" />
+                <element signature="e#10785#11165#0" />
+                <element signature="e#11215#11605#0" />
               </folding>
             </state>
           </provider>
@@ -88,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gmail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-77">
+            <state relative-caret-position="171">
               <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding>
                 <element signature="e#24#40#0" expanded="true" />
@@ -124,7 +146,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -269,15 +291,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.119791664" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.11959958" />
       <window_info id="Structure" order="1" sideWeight="0.50090414" side_tool="true" weight="0.12118019" />
       <window_info id="Favorites" order="2" sideWeight="0.50090414" side_tool="true" weight="0.12118019" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32786885" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32681867" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -316,20 +338,9 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/xml/dom/minidom.py">
@@ -346,26 +357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysmtplib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding>
-            <element signature="e#24#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/tkinter/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -373,9 +364,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/dddd.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/dddd.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
@@ -390,10 +379,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/뉴스헤드라인.txt">
+    <entry file="file://$PROJECT_DIR$/뉴스헤드라인.txt" />
+    <entry file="file://$PROJECT_DIR$/dsf.py" />
+    <entry file="file://$PROJECT_DIR$/apiService.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        <state relative-caret-position="3268">
+          <caret line="176" column="44" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -416,43 +407,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apiService.py">
+    <entry file="file://$PROJECT_DIR$/mysmtplib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="826">
-          <caret line="176" column="44" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
+        <state relative-caret-position="57">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dsf.py">
+    <entry file="file://$PROJECT_DIR$/gmail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        <state relative-caret-position="171">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#24#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="171">
+          <caret line="320" column="37" lean-forward="true" selection-start-line="320" selection-start-column="37" selection-end-line="320" selection-end-column="37" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#1058#1371#0" />
-            <element signature="e#1417#1774#0" />
-            <element signature="e#1816#2270#0" />
-            <element signature="e#2314#2776#0" />
-            <element signature="e#2819#3167#0" />
-            <element signature="e#3776#4187#0" />
-            <element signature="e#4236#4257#0" />
-            <element signature="e#4300#4804#0" />
-            <element signature="e#4858#5071#0" />
-            <element signature="e#5124#6204#0" />
-            <element signature="e#6353#8965#0" />
-            <element signature="e#9560#11738#0" />
-            <element signature="e#11779#12159#0" />
-            <element signature="e#12096#12976#0" />
+            <element signature="e#1398#1711#0" />
+            <element signature="e#1757#2114#0" />
+            <element signature="e#2156#2573#0" />
+            <element signature="e#2617#3042#0" />
+            <element signature="e#3085#3396#0" />
+            <element signature="e#3437#3848#0" />
+            <element signature="e#3961#4465#0" />
+            <element signature="e#4519#4732#0" />
+            <element signature="e#4785#5865#0" />
+            <element signature="e#8566#10744#0" />
+            <element signature="e#10785#11165#0" />
+            <element signature="e#11215#11605#0" />
           </folding>
         </state>
       </provider>

@@ -12,19 +12,19 @@ from openapi_uri import *
 from gmail import *
 
 root = Tk()
-#top = Toplevel(root)
+
 root.geometry("500x500+500+200")
 root.withdraw()
 #label = Label(root)
 #label = Label(top)
 im = None
+#image = None
 
 g_Tk = Tk()
 #g_Tk.geometry("800x600+750+200")
 g_Tk.geometry("1000x610+200+50")
 
-Imagelabel = Label(g_Tk, bg='gray', width=33, height=16)
-Imagelabel.place(x=740, y=70)
+
 Maplabel = Label(g_Tk, bg='gray', width=33, height=16)
 Maplabel.place(x=740, y=340)
 
@@ -308,7 +308,8 @@ def InitSpecificRenderText():
 
 # 공연전시 이미지 출력
 def DisplayImage(url):
-    global im, top
+    global im
+    top = Toplevel()
     #root.geometry("500x500+500+200")
     #root.deiconify()
 
@@ -318,9 +319,11 @@ def DisplayImage(url):
     im = Image.open(BytesIO(raw_data))
     image = ImageTk.PhotoImage(im)
     #label = Label(g_Tk, image=image)
-    label.config(image=image)
-    label.pack()
-    root.mainloop()
+    Imagelabel = Label(top, bg='gray', width=33, height=16)
+    Imagelabel.place(x=740, y=70)
+    Imagelabel.config(image=image)
+    #Imagelabel.pack()
+    #root.mainloop()
 
     #return image
     #imagelabel.config(image=image, height=400, width=400)
