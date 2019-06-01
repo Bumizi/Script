@@ -11,23 +11,10 @@ import random
 from openapi_uri import *
 from gmail import *
 
-root = Tk()
-#top = Toplevel(root)
-root.geometry("500x500+500+200")
-root.withdraw()
-#label = Label(root)
-#label = Label(top)
-im = None
+
 
 g_Tk = Tk()
-#g_Tk.geometry("800x600+750+200")
-g_Tk.geometry("1000x610+200+50")
-
-Imagelabel = Label(g_Tk, bg='gray', width=33, height=16)
-Imagelabel.place(x=740, y=70)
-Maplabel = Label(g_Tk, bg='gray', width=33, height=16)
-Maplabel.place(x=740, y=340)
-
+g_Tk.geometry("800x600+750+200")
 g_Tk.title("공연 / 전시 정보 조회 서비스")
 SearchMode = 3
 TempFont1 = font.Font(g_Tk, size=15, weight='bold', family='Consolas')
@@ -48,8 +35,8 @@ def InitTopText():
     MainText = Label(g_Tk, font=TempFont, text="[공연/전시 정보검색 서비스]")
     MainText.place(x=300, y=10)
     SpecificSearchLabel = Label(g_Tk, font=TempFont2, text="일련번호")
-    SpecificSearchLabel.place(x=360, y=70)
-    InputLabel3.place(x=430, y=65)
+    SpecificSearchLabel.place(x=420, y=70)
+    InputLabel3.place(x=490, y=65)
 
 # 기능별 버튼 출력
 def SearchCategoryButton():
@@ -65,6 +52,7 @@ def InitSearchByArea():
     global SearchMode
     SearchMode = 0
     RealmComboBox.place_forget()
+    SearchButton.place(x=320, y=125)
     SearchLabel.config(text="지역별 검색")
     SearchLabel.place(x=130, y=60)
     OptionLabel1.config(text="시/도")
@@ -81,6 +69,7 @@ def InitSearchByPeriod():
     global SearchMode
     SearchMode = 1
     RealmComboBox.place_forget()
+    SearchButton.place(x=320, y=125)
     SearchLabel.config(text="기간별 검색")
     SearchLabel.place(x=130, y=60)
     OptionLabel1.config(text="시작 연월일")
@@ -96,6 +85,7 @@ def InitSearchByPeriod():
 def InitSearchByRealm():
     global SearchMode
     SearchMode = 2
+    SearchButton.place(x=320, y=125)
     OptionLabel2.place_forget()
     InputLabel1.place_forget()
     InputLabel2.place_forget()
@@ -105,14 +95,29 @@ def InitSearchByRealm():
     OptionLabel1.place(x=30, y=100)
     RealmComboBox.place(x=80, y=100)
 
+# 안씀
+def InitSearchListBox():
+    global SearchListBox
+    ListBoxScrollbar = Scrollbar(g_Tk)
+    ListBoxScrollbar.pack()
+    ListBoxScrollbar.place(x=1500, y=50)
+    SearchListBox = Listbox(g_Tk, activestyle='none', width=10, height=1, borderwidth=12, relief='ridge', yscrollcommand=ListBoxScrollbar.set)
+    SearchListBox.insert(1, "도서관")
+    SearchListBox.insert(2, "모범음식점")
+    SearchListBox.insert(3, "마트")
+    SearchListBox.insert(4, "문화시설")
+    SearchListBox.pack()
+    SearchListBox.place(x=500, y=50)
+    ListBoxScrollbar.config(command=SearchListBox.yview)
+
 # 검색 버튼 출력
 def InitSearchButton():
     SearchButton = Button(g_Tk, font=TempFont2, text="검색",  command=SearchButtonAction)
-    SearchButton.place(x=270, y=125)
+    SearchButton.place(x=320, y=125)
     SpecificSearchButton = Button(g_Tk, font=TempFont2, text="검색", command=SpecificSearchButtonAction)
-    SpecificSearchButton.place(x=600, y=65)
+    SpecificSearchButton.place(x=650, y=65)
     SendingEmailButton = Button(g_Tk, font=TempFont2, text="E-mail", command=SendingMailButtonAction)
-    SendingEmailButton.place(x=660, y=65)
+    SendingEmailButton.place(x=700, y=65)
 
 # 이메일 버튼 클릭
 def SendingMailButtonAction():
@@ -169,70 +174,80 @@ def DisplayPerforList(DataList):
 
 # 공연전시 세부정보 출력
 def DisplaySpecificInfo(DataList):
-    #for i in range(len(DataList)):
-    RenderText2.insert(INSERT, "[일련번호]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][0])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[제목]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][1])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[시작일]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][2])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[마감일]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][3])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[장소]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][4])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[분류]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][5])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[지역]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][6])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[부제]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][7])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[가격]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][8])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[주내용]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][9])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[소내용]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][10])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[URL 주소]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][11])
-    RenderText2.insert(INSERT, "\n\n")
-    RenderText2.insert(INSERT, "[연락처]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][12])
-    RenderText2.insert(INSERT, "\n\n")
+    for i in range(len(DataList)):
+        RenderText2.insert(INSERT, "[일련번호]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][0])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[제목]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][1])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[시작일]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][2])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[마감일]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][3])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[장소]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][4])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[분류]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][5])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[지역]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][6])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[부제]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][7])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[가격]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][8])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[주내용]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][9])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[소내용]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][10])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[URL 주소]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][11])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[연락처]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][12])
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[사진]")
+        RenderText2.insert(INSERT, "\n")
 
-    DisplayImage(DataList[0][13])
-    #RenderText2.window_create(INSERT, create=DisplayImage(DataList[0][13]))
-    #label.config(image=DisplayImage(DataList[0][13]))
-    #RenderText2.window_create(INSERT, window=label)
-    #RenderText2.image_create(INSERT, image=DisplayImage(DataList[0][13]))
 
-    RenderText2.insert(INSERT, "[상세 주소]")
-    RenderText2.insert(INSERT, "\n")
-    RenderText2.insert(INSERT, DataList[0][16])
-    RenderText2.insert(INSERT, "\n\n")
+        #with urllib.request.urlopen(DataList[i][13]) as u:
+        #    raw_data = u.read()
+        #im = Image.open(BytesIO(raw_data))
+        #image = ImageTk.PhotoImage(im)
+        #label = Label(RenderText2, image=image, height=300, width=300)
+        #label.pack()
+        #label.place(x=0, y=0)
+
+        #RenderText2.window_create(INSERT, create=DisplayImage(DataList[i][13]))
+        #RenderText2.image_create(INSERT, image=image)
+        #RenderText2.window_create(INSERT, window=DisplayImage(DataList[i][13]))
+        #RenderText2.image_create(INSERT, image=DisplayImage(DataList[i][13]))
+        RenderText2.insert(INSERT, "\n\n")
+        RenderText2.insert(INSERT, "[상세 주소]")
+        RenderText2.insert(INSERT, "\n")
+        RenderText2.insert(INSERT, DataList[i][16])
+        RenderText2.insert(INSERT, "\n\n")
 
 # 안씀
 def SearchLibrary():
@@ -288,11 +303,11 @@ def SearchLibrary():
 def InitRenderText():
     global RenderText
     RenderTextScrollbar = Scrollbar(g_Tk)
-    RenderText = Text(g_Tk, width=40, height=29, borderwidth=12, relief='ridge', yscrollcommand=RenderTextScrollbar.set)
+    RenderText = Text(g_Tk, width=49, height=29, borderwidth=12, relief='ridge', yscrollcommand=RenderTextScrollbar.set)
     RenderText.pack()
     RenderText.place(x=10, y=190)
     RenderTextScrollbar.config(command=RenderText.yview)
-    RenderTextScrollbar.place(x=320, y=190)
+    RenderTextScrollbar.place(x=380, y=190)
     RenderText.configure(state='disabled')
 
 # 공연전시 세부정보 창
@@ -301,38 +316,23 @@ def InitSpecificRenderText():
     RenderTextScrollbar2 = Scrollbar(g_Tk)
     RenderText2 = Text(g_Tk, width=49, height=36, borderwidth=12, relief='ridge', yscrollcommand=RenderTextScrollbar2.set)
     RenderText2.pack()
-    RenderText2.place(x=350, y=100)
+    RenderText2.place(x=410, y=100)
     RenderTextScrollbar2.config(command=RenderText2.yview)
-    RenderTextScrollbar2.place(x=720, y=100)
+    RenderTextScrollbar2.place(x=780, y=100)
     RenderText.configure(state='disabled')
 
 # 공연전시 이미지 출력
 def DisplayImage(url):
-    global im, top
-    #root.geometry("500x500+500+200")
-    #root.deiconify()
-
-    #url = "http://tong.visitkorea.or.kr/cms/resource/74/2396274_image2_1.JPG"
+    global RenderText2
     with urllib.request.urlopen(url) as u:
         raw_data = u.read()
     im = Image.open(BytesIO(raw_data))
     image = ImageTk.PhotoImage(im)
-    #label = Label(g_Tk, image=image)
-    label.config(image=image)
+    label = Label(RenderText2, image=image, height=300, width=300)
     label.pack()
-    root.mainloop()
-
+    label.place(x=0, y=0)
+    #label = Label(RenderText2, image=image, height=200, width=200)
     #return image
-    #imagelabel.config(image=image, height=400, width=400)
-    #imagelabel.pack()
-    #imagelabel.place(x=0, y=0)
-    #root.mainloop()
-
-
-    #im = Image.open(BytesIO(raw_data))
-    #image = ImageTk.PhotoImage(master=RenderText2,image=im)
-    #label = Label(RenderText2, image=image, height=300, width=300)
-
 
 
 SearchButton = Button(g_Tk, text="검색",  command=SearchButtonAction)
@@ -347,6 +347,5 @@ InitSpecificRenderText()
 #InitSendEmailButton()
 #InitSortListBox()
 #InitSortButton()
-
-
 g_Tk.mainloop()
+
