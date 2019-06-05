@@ -5,11 +5,11 @@ from io import BytesIO
 import urllib
 import urllib.request
 from PIL import Image, ImageTk
-
+from gmail import *
+import folium
+from openapi_uri import *
 import tkinter.messagebox
 import random
-from openapi_uri import *
-from gmail import *
 
 im = None
 
@@ -226,12 +226,14 @@ def DisplaySpecificInfo(DataList):
     RenderText2.insert(INSERT, "\n")
     RenderText2.insert(INSERT, DataList[0][12])
     RenderText2.insert(INSERT, "\n\n")
-    DisplayImage(DataList[0][13])
 
     RenderText2.insert(INSERT, "[상세 주소]")
     RenderText2.insert(INSERT, "\n")
     RenderText2.insert(INSERT, DataList[0][16])
     RenderText2.insert(INSERT, "\n\n")
+
+    DisplayMap(DataList[0][15], DataList[0][14], DataList[0][1])
+    DisplayImage(DataList[0][13])
 
 # 안씀
 def SearchLibrary():
@@ -318,6 +320,23 @@ def DisplayImage(url):
     label = Label(ImageWindow, image=image, height=400, width=400)
     label.place(x=0, y=0)
     ImageWindow.mainloop()
+
+# 공연전시 지도 출력
+def DisplayMap(x, y, title):
+    co_x = float(x)
+    co_y = float(y)
+    # 위도 경도 지정
+    map_osm = folium.Map(location=[co_x, co_y], zoom_start=13)
+    # 마커 지정
+    folium.Marker([co_x, co_y], popup=title).add_to(map_osm)
+    # html 파일로 저장
+    map_osm.save('osm.html')
+    import webbrowser
+    webbrowser.open_new("osm.html")
+
+    #from tkinterhtml import HtmlFrame
+    #frame = HtmlFrame(root, horizontal_scrollbar="auto")
+    #frame.set_content("<html></html>")
 
 
 SearchButton = Button(g_Tk, text="검색",  command=SearchButtonAction)
