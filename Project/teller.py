@@ -18,19 +18,22 @@ from openapi_uri import *
 
 def replyAreaData(sido, user, gugun):
     print(user, sido, gugun)
-    res_list = noti.getAreaData(sido, gugun)
+    #res_list = noti.getAreaData(sido, gugun)
+    res_list = getApi_SearchByArea(sido, gugun, 999)
     msg = ''
-    for r in res_list:
-        print(str(datetime.now()).split('.')[0], r)
-        if len(r+msg)+1 > noti.MAX_MSG_LENGTH:
+    for res in res_list:
+        for r in res:
+            print(str(datetime.now()).split('.')[0], r)
+            if len(str(r)+msg)+1 > noti.MAX_MSG_LENGTH:
+                noti.sendMessage(user, msg)
+                msg = str(r)+'\n'
+            else:
+                msg += str(r)+'\n'
+        if msg:
             noti.sendMessage(user, msg)
-            msg = r+'\n'
+            msg = ''
         else:
-            msg += r+'\n'
-    if msg:
-        noti.sendMessage(user, msg)
-    else:
-        noti.sendMessage(user, '%s %s 지역에 해당하는 데이터가 없습니다.' % sido, gugun)
+            noti.sendMessage(user, '지역에 해당하는 데이터가 없습니다.')
 
 
 def replyPeriodData(start, user, end):
@@ -38,34 +41,39 @@ def replyPeriodData(start, user, end):
     #res_list = noti.getPeriodData(start, end)
     res_list = getApi_SearchByPeriod(start, end, 999)
     msg = ''
-    for r in res_list:
-        print(str(datetime.now()).split('.')[0], r)
-        if len(r+msg)+1 > noti.MAX_MSG_LENGTH:
+    for res in res_list:
+        for r in res:
+            print(str(datetime.now()).split('.')[0], r)
+            if len(str(r)+msg)+1 > noti.MAX_MSG_LENGTH:
+                noti.sendMessage(user, msg)
+                msg = str(r)+'\n'
+            else:
+                msg += str(r)+'\n'
+        if msg:
             noti.sendMessage(user, msg)
-            msg = r+'\n'
+            msg = ''
         else:
-            msg += r+'\n'
-    if msg:
-        noti.sendMessage(user, msg)
-    else:
-        noti.sendMessage(user, '기간에 해당하는 데이터가 없습니다.')
+            noti.sendMessage(user, '기간에 해당하는 데이터가 없습니다.')
 
 
 def replyRealmData(realm, user):
     print(user, realm)
-    res_list = noti.getRealmData(realm)
+    #res_list = noti.getRealmData(realm)
+    res_list = getApi_SearchByRealm(realm, 999)
     msg = ''
-    for r in res_list:
-        print(str(datetime.now()).split('.')[0], r)
-        if len(r+msg)+1 > noti.MAX_MSG_LENGTH:
+    for res in res_list:
+        for r in res:
+            print(str(datetime.now()).split('.')[0], r)
+            if len(str(r)+msg)+1 > noti.MAX_MSG_LENGTH:
+                noti.sendMessage(user, msg)
+                msg = str(r)+'\n'
+            else:
+                msg += str(r)+'\n'
+        if msg:
             noti.sendMessage(user, msg)
-            msg = r+'\n'
+            msg = ''
         else:
-            msg += r+'\n'
-    if msg:
-        noti.sendMessage(user, msg)
-    else:
-        noti.sendMessage(user, '%s 분류에 해당하는 데이터가 없습니다.' % realm)
+            noti.sendMessage(user, '분야에 해당하는 데이터가 없습니다.')
 
 def save(user, loc_param):
     conn = sqlite3.connect('users.db')
