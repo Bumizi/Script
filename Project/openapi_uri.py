@@ -4,6 +4,7 @@ import sys
 from urllib.parse import urlencode, quote_plus
 from urllib.request import Request, urlopen
 from xml.dom.minidom import parseString
+import spam
 
 DataList = []
 
@@ -99,6 +100,7 @@ def getApi_SearchBySeq(seq):
     request = Request(url)
     response_body = urlopen(request).read()
     print(extractData_SpecificPerfor(response_body))
+    print(spam.strlen(url))
     return extractData_SpecificPerfor(response_body)
 
 
