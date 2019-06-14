@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9997adb8-d128-4494-a525-b9a58670c8b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/openapi_uri.py" beforeDir="false" afterPath="$PROJECT_DIR$/openapi_uri.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osm.html" beforeDir="false" afterPath="$PROJECT_DIR$/osm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python36-master/python36-master/3부/25장/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python36-master/python36-master/3부/25장/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,30 +47,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/openapi_uri.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="102" column="27" lean-forward="true" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
+            <state relative-caret-position="209">
+              <caret line="101" column="52" selection-start-line="101" selection-start-column="52" selection-end-line="101" selection-end-column="52" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#1589#1820#0" />
-                <element signature="e#2893#3118#0" />
-                <element signature="e#3164#3580#0" />
-                <element signature="e#3891#6025#0" />
-                <element signature="e#6071#9380#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="238" column="20" selection-start-line="238" selection-start-column="20" selection-end-line="238" selection-end-column="20" />
+            <state relative-caret-position="2907">
+              <caret line="285" column="49" selection-start-line="285" selection-start-column="49" selection-end-line="285" selection-end-column="49" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#5146#6226#0" />
+                <element signature="e#6282#8664#0" />
                 <element signature="e#8696#10874#0" />
               </folding>
             </state>
@@ -335,8 +330,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.11904762" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.11904762" />
       <window_info id="Structure" order="1" sideWeight="0.50090414" side_tool="true" weight="0.12118019" />
       <window_info id="Favorites" order="2" sideWeight="0.50090414" side_tool="true" weight="0.12118019" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -503,6 +499,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2907">
+          <caret line="285" column="49" selection-start-line="285" selection-start-column="49" selection-end-line="285" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#5146#6226#0" />
+            <element signature="e#6282#8664#0" />
+            <element signature="e#8696#10874#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/noti.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2622">
@@ -532,26 +541,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/openapi_uri.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="102" column="27" lean-forward="true" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
+        <state relative-caret-position="209">
+          <caret line="101" column="52" selection-start-line="101" selection-start-column="52" selection-end-line="101" selection-end-column="52" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#1589#1820#0" />
-            <element signature="e#2893#3118#0" />
-            <element signature="e#3164#3580#0" />
-            <element signature="e#3891#6025#0" />
-            <element signature="e#6071#9380#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="238" column="20" selection-start-line="238" selection-start-column="20" selection-end-line="238" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#8696#10874#0" />
           </folding>
         </state>
       </provider>
