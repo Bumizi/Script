@@ -100,37 +100,61 @@ class YahtzeeBoard:
         if (row>7):
             index = row-2
         # 선택한 카테고리 점수 적고 disable 시킴
-        self.players[self.player].setScore(score,index)
+        self.players[self.player].setScore(score, index)
         self.players[self.player].setAtUsed(index)
         self.fields[row][self.player].configure(text=str(score))
         self.fields[row][self.player]['state'] = 'disabled'
         self.fields[row][self.player]['bg'] = 'light gray'
         # UPPER category 가 전부 사용되었으면 UpperScore , UpperBonus 계산
         if (self.players[self.player].allUpperUsed()):
-            self.fields[self.UPPERTOTAL][self.player].configure(text = str(self.players[self.player].getUpperScore()))
+            self.fields[self.UPPERTOTAL][self.player].configure(text=str(self.players[self.player].getUpperScore()))
             if (self.players[self.player].getUpperScore() > 63):
                 self.fields[self.UPPERBONUS][self.player].configure(text="35") #UPPERBONUS=7
             else:
                 self.fields[self.UPPERBONUS][self.player].configure(text="0") #UPPERBONUS=7
         # LOWER category 전부 사용되었으면 LowerScore 계산
         if (self.players[self.player].allLowerUsed()):
-            pass
+            self.fields[self.LOWERTOTAL][self.player].configure(text=str(self.players[self.player].getLowerScore()))
         # UPPER category 와 LOWER category 가 전부 사용되었으면 TOTAL 계산
         if (self.players[self.player].allUpperUsed() and self.players[self.player].allLowerUsed()):
-            pass
+            self.fields[self.TOTAL][self.player].configure(text=str(self.players[self.player].getTotalScore()))
         # 다음 플레이어로 넘어가고 선택할 수 없는 카테고리들은 disable 시킴
         self.player = (self.player + 1) % self.numPlayers
         for i in range(self.TOTAL+1):
             for j in range(self.numPlayers):
-                pass
-
+                # 누를 필요없는 버튼은 disable 시킴
+                if (j != self.player or (i-1) == self.UPPERTOTAL or (i-1) == self.UPPERBONUS or (i-1) == self.LOWERTOTAL or (i-1) == self.TOTAL):
+                    self.fields[i-1][j]['state'] = 'disabled'
+                    self.fields[i-1][j]['bg'] = 'light gray'
+                else:
+                    for k in range(6):
+                        if self.players[self.player].used[k] == False:
+                            self.fields[k][j]['state'] = 'normal'
+                            self.fields[k][j]['bg'] = 'SystemButtonFace'
+                    for k in range(6, 13):
+                        if self.players[self.player].used[k] == False:
+                            self.fields[k+2][j]['state'] = 'normal'
+                            self.fields[k+2][j]['bg'] = 'SystemButtonFace'
+        # 다시 Roll Dice 과 diceButtons 버튼 활성화 , bottomLabel 초기화
+        self.rollDice['state'] = 'normal'
+        self.rollDice['bg'] = 'SystemButtonFace'
+        self.rollDice['text'] = 'Roll Dice'
+        self.roll = 0
+        self.bottomLabel.config(text=self.players[self.player].toString() + "차례: Roll Dice 버튼을 누르세요")
+        for i in range(5):    # dice 버튼 5 개 생성
+            self.diceButtons[i]['state'] = 'normal'
+            self.diceButtons[i]['bg'] = 'SystemButtonFace'
+            self.diceButtons[i]['text'] = '?'
         # 라운드 증가 시키고 종료 검사
         if (self.player == 0):
             self.round += 1
         if (self.round == 13):
-            pass
-        # 다시 Roll Dice 과 diceButtons 버튼 활성화 , bottomLabel 초기화
-        pass
+            game_result = []
+            for i in range(len(self.players)):
+                game_result.append(self.players[i].getTotalScore())
+            for i in self.players:
+                if i.getTotalScore() == max(game_result):
+                    self.bottomLabel.config(text=i.toString() + "의 승리 ! ! !")
 
 
 YahtzeeBoard()

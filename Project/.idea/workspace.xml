@@ -2,7 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9997adb8-d128-4494-a525-b9a58670c8b3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v15/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v15/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v15/ipch/AutoPCH/da499d09193b2e6c/SPAMMODUL.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/Release/spam.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/Release/spam.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/Release/spam.tlog/spam.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/Release/spam.tlog/unsuccessfulbuild" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/Release/vc141.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/spammodul.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/spam.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/spam.write.1u.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spammodul.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/vc141.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.iobj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.ipdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/untitled.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/Configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/Configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/Player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/YahtzeeBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/YahtzeeBoard.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -10,6 +47,18 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="601335040">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Project" />
@@ -19,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
+            <state relative-caret-position="833">
               <caret line="240" selection-start-line="240" selection-end-line="240" />
               <folding>
                 <element signature="e#259#1084#0" />
@@ -50,11 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/openapi_uri.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="101" column="52" selection-start-line="101" selection-start-column="52" selection-end-line="101" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="103" column="52" lean-forward="true" selection-start-line="103" selection-start-column="52" selection-end-line="103" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -138,7 +184,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -329,15 +375,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.11904762" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.11854584" />
       <window_info id="Structure" order="1" sideWeight="0.50090414" side_tool="true" weight="0.12118019" />
       <window_info id="Favorites" order="2" sideWeight="0.50090414" side_tool="true" weight="0.12118019" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3262295" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3257329" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -376,20 +422,9 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -397,7 +432,7 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/openapi_uri.py</url>
           <line>102</line>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -470,35 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apiService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="240" selection-start-line="240" selection-end-line="240" />
-          <folding>
-            <element signature="e#259#1084#0" />
-            <element signature="e#1127#1662#0" />
-            <element signature="e#1789#2287#0" />
-            <element signature="e#2410#2919#0" />
-            <element signature="e#3052#3625#0" />
-            <element signature="e#3745#3929#0" />
-            <element signature="e#3971#4151#0" />
-            <element signature="e#4200#4443#0" />
-            <element signature="e#4495#4731#0" />
-            <element signature="e#4780#4977#0" />
-            <element signature="e#5152#6070#0" />
-            <element signature="e#6123#7374#0" />
-            <element signature="e#7426#7998#0" />
-            <element signature="e#8053#8762#0" />
-            <element signature="e#8824#9642#0" />
-            <element signature="e#9668#9871#0" />
-            <element signature="e#9894#10004#0" />
-            <element signature="e#10041#11127#0" />
-            <element signature="e#11168#11945#0" />
-            <element signature="e#11989#13040#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2907">
@@ -539,13 +545,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apiService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="240" selection-start-line="240" selection-end-line="240" />
+          <folding>
+            <element signature="e#259#1084#0" />
+            <element signature="e#1127#1662#0" />
+            <element signature="e#1789#2287#0" />
+            <element signature="e#2410#2919#0" />
+            <element signature="e#3052#3625#0" />
+            <element signature="e#3745#3929#0" />
+            <element signature="e#3971#4151#0" />
+            <element signature="e#4200#4443#0" />
+            <element signature="e#4495#4731#0" />
+            <element signature="e#4780#4977#0" />
+            <element signature="e#5152#6070#0" />
+            <element signature="e#6123#7374#0" />
+            <element signature="e#7426#7998#0" />
+            <element signature="e#8053#8762#0" />
+            <element signature="e#8824#9642#0" />
+            <element signature="e#9668#9871#0" />
+            <element signature="e#9894#10004#0" />
+            <element signature="e#10041#11127#0" />
+            <element signature="e#11168#11945#0" />
+            <element signature="e#11989#13040#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/openapi_uri.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="101" column="52" selection-start-line="101" selection-start-column="52" selection-end-line="101" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="103" column="52" lean-forward="true" selection-start-line="103" selection-start-column="52" selection-end-line="103" selection-end-column="52" />
         </state>
       </provider>
     </entry>
