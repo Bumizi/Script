@@ -2,44 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3339b0d7-c299-4359-a2fb-88cf40e589e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/.vs/spam/v15/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/.vs/spam/v15/Browse.VC.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/.vs/spam/v15/ipch/AutoPCH/da499d09193b2e6c/SPAMMODUL.ipch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/Release/spam.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/Release/spam.tlog/CL.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/Release/spam.tlog/spam.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/Release/spam.tlog/unsuccessfulbuild" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/Release/vc141.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/spam.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/spam.vcxproj.filters" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/spam.vcxproj.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/spammodul.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/x64/Release/spam.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/x64/Release/spam.tlog/CL.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/x64/Release/spam.tlog/CL.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/x64/Release/spam.tlog/CL.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/x64/Release/spam.tlog/link.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/x64/Release/spam.tlog/link.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/x64/Release/spam.tlog/link.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/x64/Release/spam.tlog/spam.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/x64/Release/spam.tlog/spam.write.1u.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/x64/Release/spammodul.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/spam/x64/Release/vc141.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/x64/Release/spam.exp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/x64/Release/spam.iobj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/x64/Release/spam.ipdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/x64/Release/spam.lib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/x64/Release/spam.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/spam/x64/Release/spam.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/Player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YahtzeeBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/YahtzeeBoard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/openapi_uri.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Project/openapi_uri.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/osm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Project/osm.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,9 +16,9 @@
     <session id="1713179436">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -105,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/YahtzeeBoard.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="834">
-              <caret line="140" column="43" selection-start-line="140" selection-start-column="43" selection-end-line="140" selection-end-column="43" />
+            <state relative-caret-position="266">
+              <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#545#1292#0" />
@@ -176,6 +141,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,7 +153,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,9 +369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -414,9 +376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -424,9 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -471,8 +427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/YahtzeeBoard.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="834">
-          <caret line="140" column="43" selection-start-line="140" selection-start-column="43" selection-end-line="140" selection-end-column="43" />
+        <state relative-caret-position="266">
+          <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
             <element signature="e#545#1292#0" />

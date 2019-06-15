@@ -2,44 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9997adb8-d128-4494-a525-b9a58670c8b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v15/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v15/Browse.VC.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/.vs/spam/v15/ipch/AutoPCH/da499d09193b2e6c/SPAMMODUL.ipch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/Release/spam.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/Release/spam.tlog/CL.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/Release/spam.tlog/spam.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/Release/spam.tlog/unsuccessfulbuild" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/Release/vc141.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj.filters" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/spam.vcxproj.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/spammodul.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/CL.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/link.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/spam.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spam.tlog/spam.write.1u.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/spammodul.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/spam/x64/Release/vc141.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.exp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.iobj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.ipdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.lib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam/x64/Release/spam.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/untitled.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/Configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/Configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/Player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/YahtzeeBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/YahtzeeBoard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi_uri.py" beforeDir="false" afterPath="$PROJECT_DIR$/openapi_uri.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osm.html" beforeDir="false" afterPath="$PROJECT_DIR$/osm.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,10 +17,20 @@
     <session id="601335040">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -96,11 +71,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/openapi_uri.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="103" column="52" lean-forward="true" selection-start-line="103" selection-start-column="52" selection-end-line="103" selection-end-column="52" />
+            <state relative-caret-position="152">
+              <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2907">
-              <caret line="285" column="49" selection-start-line="285" selection-start-column="49" selection-end-line="285" selection-end-column="49" />
+            <state relative-caret-position="153">
+              <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#5146#6226#0" />
@@ -132,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/teller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
+            <state relative-caret-position="1387">
               <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
               <folding>
                 <element signature="e#34#44#0" expanded="true" />
@@ -147,8 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="95">
+              <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -179,12 +157,12 @@
         <option value="$PROJECT_DIR$/noti.py" />
         <option value="$PROJECT_DIR$/teller.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/openapi_uri.py" />
         <option value="$PROJECT_DIR$/TkinterGUI.py" />
+        <option value="$PROJECT_DIR$/openapi_uri.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -229,7 +207,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TkinterGUI">
+  <component name="RunManager" selected="Python.teller">
     <configuration name="TkinterGUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -344,8 +322,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.TkinterGUI" />
         <item itemvalue="Python.teller" />
+        <item itemvalue="Python.TkinterGUI" />
         <item itemvalue="Python.noti" />
         <item itemvalue="Python.dsf" />
         <item itemvalue="Python.openapi_uri" />
@@ -375,15 +353,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.11854584" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.11854584" />
       <window_info id="Structure" order="1" sideWeight="0.50090414" side_tool="true" weight="0.12118019" />
       <window_info id="Favorites" order="2" sideWeight="0.50090414" side_tool="true" weight="0.12118019" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3257329" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3257329" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -431,7 +408,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/openapi_uri.py</url>
-          <line>102</line>
+          <line>101</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -505,19 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2907">
-          <caret line="285" column="49" selection-start-line="285" selection-start-column="49" selection-end-line="285" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#5146#6226#0" />
-            <element signature="e#6282#8664#0" />
-            <element signature="e#8696#10874#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/noti.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2622">
@@ -525,23 +489,6 @@
           <folding>
             <element signature="e#34#44#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
-          <folding>
-            <element signature="e#34#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -574,10 +521,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/openapi_uri.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="103" column="52" lean-forward="true" selection-start-line="103" selection-start-column="52" selection-end-line="103" selection-end-column="52" />
+        <state relative-caret-position="152">
+          <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TkinterGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#5146#6226#0" />
+            <element signature="e#6282#8664#0" />
+            <element signature="e#8696#10874#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+          <folding>
+            <element signature="e#34#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
